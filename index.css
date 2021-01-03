@@ -7,19 +7,31 @@
 body{
     background:rgba(1, 14, 26, 0.815);
 }
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
 .container{
-    width:400px;
+    width:420px;
     height:700px;
-    margin:auto;
+   
     background:purple;
     border-radius:20px;
    
-    margin-top:20px;
+ 
   
 }
+@media(max-width:550px) {
+    .container{
+       
+        width:450px;
+    }
+}
+
 @media(max-width:650px) {
     .container{
-        margin-top:120px;
+        width:350px;
     }
 }
 .header{

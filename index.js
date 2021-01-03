@@ -23,6 +23,7 @@ function botVoice(message) {
     const speech = new SpeechSynthesisUtterance();
     speech.text = "Sorry I don't know what that mean!"
 
+     
     if(message.includes('hai')){
         let finalresult = "Hey how is it going buddy"
         speech.text = finalresult;
@@ -61,6 +62,7 @@ function botVoice(message) {
         let finalresult = "sorry I'm an introvert you can ask anything"
         speech.text = finalresult;
     }
+
     if(message.includes('I love you' || "love" || "love you so much")){
         let finalresult = "Love you too."
         speech.text = finalresult;
@@ -85,6 +87,15 @@ function botVoice(message) {
         let finalresult = "Love to talk again.. Thank you"
         speech.text = finalresult;
     }
+    if(message.includes('order please')){
+        let finalresult = "do roti daa"
+        speech.text = finalresult;
+    }
+    if(message.includes('call my name')){
+        let finalresult = "Kayamkhani mohammed faiz ahamed khan"
+        speech.text = finalresult;
+    }
+ 
     window.speechSynthesis.speak(speech)
     chat_area.appendChild(showBotMessage(speech.text))
     console.log(speech.text)
